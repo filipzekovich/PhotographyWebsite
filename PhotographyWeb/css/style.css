@@ -10,7 +10,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.0);
   color: #fff;
   padding: 1rem 2rem;
   z-index: 1000;
@@ -20,6 +20,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: #fff;
+  z-index: 1000;
 }
 
 .nav-list {
@@ -28,6 +32,12 @@ header {
   gap: 2rem;
   margin: 0;
   padding: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-list.show {
+  display: flex;
+  transform: translateY(0);
 }
 
 .nav-list li a {
@@ -39,6 +49,7 @@ header {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 .hamburger span {
@@ -55,7 +66,8 @@ header {
   text-align: center;
   overflow: hidden;
   position: relative;
-  background-color: black;
+  background: repeating-radial-gradient(white,black);
+
 }
 
 .banner .slider{
@@ -94,36 +106,39 @@ header {
   object-fit: cover;
 }
 .banner .content{
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: auto;
   top:60%;
   left: 50%;
   transform: translateX(-50%);
-  height: max-content;
   padding-bottom: 100px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
 }
 
 .banner .content h1{
   font-family: 'Arial Black';
-  font-size: 8em;
+  font-size: 10em;
   color: #dddddd;
-  z-index: 1;
+  z-index: 2;
 }
 
 
 .banner .content .person{
   background-image: url("../img/hamza-transperent.png");
   width: 100%;
-  height: 100%;
+  height: 180%;
   position: absolute;
-  bottom: 40%;
-  background-size: auto 170%;
+  bottom: auto;
+  background-size: auto 200%;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center top;
   z-index: 0;
 }
+
 section {
   padding: 4rem 2rem;
   text-align: center;
@@ -183,5 +198,14 @@ form button {
 
   .nav-list.show {
     display: flex;
+  }
+
+  .banner .content h1 {
+    font-size: 4em;
+  }
+
+  .banner .slider {
+    width: 150px;
+    height: 200px;
   }
 }
