@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Website</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+<div id="home">
+  <div class="banner">
+    <div class="slider" style="--quantity:6">
+      <div class="item" style="--position: 1"><img src="./img/1.jpg " alt=""></div>
+      <div class="item" style="--position: 2"><img src="./img/2.jpg " alt=""></div>
+      <div class="item" style="--position: 3"><img src="./img/3.jpg " alt=""></div>
+      <div class="item" style="--position: 4"><img src="./img/4.jpg " alt=""></div>
+      <div class="item" style="--position: 5"><img src="./img/5.jpg " alt=""></div>
+      <div class="item" style="--position: 6"><img src="./img/6.jpg " alt=""></div>
+    </div>
+    <div class="content">
+      <h1>HAMZA FOUAD</h1>
+      <div class="person"></div>
+    </div>
+  </div>
+</div>
+<section id="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>Here is some information about me.</p>
+</section>
+<section id="portfolio" data-aos="fade-up">
+  <h2>My Work</h2>
+  <div class="gallery">
+    <img src="./img/1.jpg" alt="Project 1">
+    <img src="./img/2.jpg" alt="Project 2">
+    <img src="./img/3.jpg" alt="Project 3">
+    <img src="./img/4.jpg" alt="Project 4">
+    <img src="./img/5.jpg" alt="Project 5">
+  </div>
+</section>
+<section id="contact" data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/xpwadkkp" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
